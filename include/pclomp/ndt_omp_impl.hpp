@@ -163,6 +163,7 @@ pclomp::NormalDistributionsTransform<PointSource, PointTarget>::computeTransform
 
     nr_iterations_++;
 
+    hessian_ = hessian;
   }
 
   // Store transformation probability. The relative differences within each scan registration are accurate
