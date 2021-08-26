@@ -112,6 +112,8 @@ namespace pclomp
 		/** \brief Empty destructor */
 		virtual ~NormalDistributionsTransform() {}
 
+		Eigen::Matrix<double, 6, 6> getHessianMatrix() { return hessian_; }
+
     void setNumThreads(int n) {
       num_threads_ = n;
     }
@@ -448,6 +450,8 @@ namespace pclomp
 
 		/** \brief The voxel grid generated from target cloud containing point means and covariances. */
 		TargetGrid target_cells_;
+
+		Eigen::Matrix<double, 6, 6> hessian_;
 
 		//double fitness_epsilon_;
 
