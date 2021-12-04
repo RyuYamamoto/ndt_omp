@@ -51,3 +51,5 @@ install(
 # install headers
 install(DIRECTORY include/pclomp
         DESTINATION include)
+
+ament_auto_package()
